@@ -20,11 +20,11 @@ function comprarElemento(e){
     }
 }
 
-function leerDatosElemento(elemento){
+function leerDatosElemento(elemento) {
     const infoElemento = {
         imagen: elemento.querySelector('img').src,
-        titulo: elemento.querySelector('h3').textcontent,
-        precio: elemento.querySelector('.precio').textcontent,
+        titulo: elemento.querySelector('h3').textContent,
+        precio: elemento.querySelector('.precio').textContent,
         id: elemento.querySelector('a').getAttribute('data-id')
     }
     insertarCarrito(infoElemento);
@@ -35,7 +35,7 @@ function insertarCarrito(elemento){
     const row = document.createElement('tr');
     row.innerHTML = `
         <td>
-            <img src="${elemento.imagen}" width=100>
+            <img src="${elemento.imagen}" width=100/>
         </td>
         <td>
             ${elemento.titulo}
